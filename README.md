@@ -1,4 +1,4 @@
-My attempt to automate a lot of manual tasks that need to be performed when freshly installing windows. Other scripts exist but this one is all about my preferences.
+My attempt to automate a lot of manual tasks that need to be performed when freshly installing windows. Other scripts exist but this one is all about my preferences. Trying to keep it simple without functions and loops.
 
 # How to use:
 
