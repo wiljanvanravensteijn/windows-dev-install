@@ -1,4 +1,4 @@
-My attempt to automate a lot of manual tasks that need to be performed when freshly installing windows. Mainly oriented at developers.
+My attempt to automate a lot of manual tasks that need to be performed when freshly installing windows. Mainly oriented to developers.
 
 # How to use:
 
