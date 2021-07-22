@@ -18,31 +18,47 @@ choco install vscode git putty docker-desktop nodejs-lts dotnet dotnet-sdk 7zip 
 npm install -g yarn eslint
 
 # remove cruft
-Get-AppxPackage Microsoft.WindowsCamera | Remove-AppxPackage
+Get-AppxPackage *Autodesk* | Remove-AppxPackage
+Get-AppxPackage *BubbleWitch* | Remove-AppxPackage
+Get-AppxPackage *MarchofEmpires* | Remove-AppxPackage
+Get-AppxPackage *Minecraft* | Remove-AppxPackage
+Get-AppxPackage *Solitaire* | Remove-AppxPackage
+Get-AppxPackage *windowscommunicationsapps* | Remove-AppxPackage
+Get-AppxPackage Microsoft.3DBuilder | Remove-AppxPackage
+Get-AppxPackage Microsoft.BingFinance | Remove-AppxPackage
+Get-AppxPackage Microsoft.BingNews | Remove-AppxPackage
+Get-AppxPackage Microsoft.BingSports | Remove-AppxPackage
+Get-AppxPackage Microsoft.BingWeather | Remove-AppxPackage
+Get-AppxPackage Microsoft.CommsPhone | Remove-AppxPackage
+Get-AppxPackage Microsoft.FreshPaint | Remove-AppxPackage
+Get-AppxPackage Microsoft.GetHelp | Remove-AppxPackage
+Get-AppxPackage Microsoft.Getstarted | Remove-AppxPackage
+Get-AppxPackage Microsoft.GetStarted | Remove-AppxPackage
 Get-AppxPackage Microsoft.Messaging | Remove-AppxPackage
 Get-AppxPackage Microsoft.Microsoft3DViewer | Remove-AppxPackage
 Get-AppxPackage Microsoft.MicrosoftOfficeHub | Remove-AppxPackage
 Get-AppxPackage Microsoft.MicrosoftSolitaireCollection | Remove-AppxPackage
 Get-AppxPackage Microsoft.MicrosoftStickyNotes | Remove-AppxPackage
 Get-AppxPackage Microsoft.MixedReality.Portal | Remove-AppxPackage
+Get-AppxPackage Microsoft.MSPaint | Remove-AppxPackage
+Get-AppxPackage Microsoft.NetworkSpeedTest | Remove-AppxPackage
+Get-AppxPackage Microsoft.Office.Sway | Remove-AppxPackage
+Get-AppxPackage Microsoft.OneConnect | Remove-AppxPackage
+Get-AppxPackage Microsoft.Print3D | Remove-AppxPackage
+Get-AppxPackage Microsoft.SkypeApp | Remove-AppxPackage
+Get-AppxPackage Microsoft.Tips | Remove-AppxPackage
+Get-AppxPackage Microsoft.ToDo | Remove-AppxPackage
+Get-AppxPackage Microsoft.Wallet | Remove-AppxPackage
+Get-AppxPackage Microsoft.WindowsCamera | Remove-AppxPackage
 Get-AppxPackage Microsoft.WindowsFeedbackHub | Remove-AppxPackage
 Get-AppxPackage Microsoft.WindowsMaps | Remove-AppxPackage
+Get-AppxPackage Microsoft.WindowsPhone | Remove-AppxPackage
 Get-AppxPackage Microsoft.WindowsSoundRecorder | Remove-AppxPackage
 Get-AppxPackage Microsoft.XboxApp | Remove-AppxPackage
+Get-AppxPackage Microsoft.XboxIdentityProvider | Remove-AppxPackage
 Get-AppxPackage Microsoft.YourPhone | Remove-AppxPackage
 Get-AppxPackage Microsoft.ZuneMusic | Remove-AppxPackage
 Get-AppxPackage Microsoft.ZuneVideo | Remove-AppxPackage
-Get-AppxPackage Microsoft.Wallet | Remove-AppxPackage
-Get-AppxPackage Microsoft.BingNews | Remove-AppxPackage
-Get-AppxPackage Microsoft.BingWeather | Remove-AppxPackage
-Get-AppxPackage Microsoft.ToDo | Remove-AppxPackage
-Get-AppxPackage *windowscommunicationsapps* | Remove-AppxPackage
-Get-AppxPackage Microsoft.OneConnect | Remove-AppxPackage
-Get-AppxPackage Microsoft.GetHelp | Remove-AppxPackage
-Get-AppxPackage Microsoft.GetStarted | Remove-AppxPackage
-Get-AppxPackage Microsoft.MSPaint | Remove-AppxPackage
-Get-AppxPackage Microsoft.SkypeApp | Remove-AppxPackage
-Get-AppxPackage Microsoft.Tips | Remove-AppxPackage
 
 # vs code extensions
 code --install-extension ms-dotnettools.csharp
@@ -54,6 +70,11 @@ code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension eamodio.gitlens
 code --install-extension mhutchie.git-graph
 code --install-extension zawys.vscode-as-git-mergetool
+code --install-extension jianbingfang.dupchecker
+code --install-extension 2gua.rainbow-brackets
+
+# let git use ssh from putty
+[Environment]::SetEnvironmentVariable("GIT_SSH","C:\ProgramData\chocolatey\lib\putty.portable\tools\plink.exe", "user")
 
 echo ""
 echo "After this, the computer should be restarted and install2.ps1 should be run to finish installation"
