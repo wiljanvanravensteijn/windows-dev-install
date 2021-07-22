@@ -19,7 +19,7 @@ choco install dotnet
 choco install dotnet-sdk
 choco install git
 choco install googlechrome
-choco insatll keepass
+choco install keepass
 choco install microsoft-windows-terminal
 choco install nodejs-lts
 choco install putty
@@ -105,6 +105,13 @@ code --install-extension zawys.vscode-as-git-mergetool
 
 # Set region to Dutch (my region)
  Set-Culture nl-NL
+
+# Remove shortcuts from desktop
+$DesktopPath = [Environment]::GetFolderPath("Desktop")
+Remove-Item "$DesktopPath\*.lnk"
+
+$DesktopPath = [Environment]::GetFolderPath("CommonDesktopDirectory")
+Remove-Item "$DesktopPath\*.lnk"
 
 echo ""
 echo "After this, the computer should be restarted and install2.ps1 should be run to finish installation"
