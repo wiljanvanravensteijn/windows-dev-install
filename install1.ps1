@@ -18,6 +18,7 @@ choco install docker-desktop
 choco install dotnet
 choco install dotnet-sdk
 choco install git
+choco install git-lfs
 choco install googlechrome
 choco install keepass
 choco install microsoft-windows-terminal
