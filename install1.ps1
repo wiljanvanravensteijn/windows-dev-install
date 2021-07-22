@@ -2,17 +2,18 @@
 # You should allow scripts in powershell by first running: Set-ExecutionPolicy Bypass -Scope Process 
 #
 
-# install windows-features
+# Install windows-features
 Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName:Microsoft-Hyper-V -All
 Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName:Microsoft-Windows-Subsystem-Linux -all
 Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName:VirtualMachinePlatform -All
 
-# install chocolatey
+# Install chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco feature enable -n=allowGlobalConfirmation
 
-# install basic software
+# Install basic software
 choco install 7zip
+choco install dbeaver
 choco install docker-desktop
 choco install dotnet
 choco install dotnet-sdk
@@ -26,11 +27,11 @@ choco install vlc
 choco install vscode
 choco install wsl2
 
-# global node packages
+# Global node packages
 npm install -g eslint
 npm install -g yarn
 
-# remove cruft
+# Remove unnecessary apps
 Get-AppxPackage *.AdobePhotoshopExpress | Remove-AppxPackage
 Get-AppxPackage *.Duolingo-LearnLanguagesforFree | Remove-AppxPackage
 Get-AppxPackage *.EclipseManager | Remove-AppxPackage
@@ -85,7 +86,7 @@ Get-AppxPackage Microsoft.YourPhone | Remove-AppxPackage
 Get-AppxPackage Microsoft.ZuneMusic | Remove-AppxPackage
 Get-AppxPackage Microsoft.ZuneVideo | Remove-AppxPackage
 
-# vs code extensions
+# VS Code extensions
 code --install-extension ms-dotnettools.csharp
 code --install-extension ms-vscode.vscode-typescript-next
 code --install-extension ms-python.python
@@ -98,8 +99,11 @@ code --install-extension zawys.vscode-as-git-mergetool
 code --install-extension jianbingfang.dupchecker
 code --install-extension 2gua.rainbow-brackets
 
-# let git use ssh from putty
+# Let git use ssh from putty
 [Environment]::SetEnvironmentVariable("GIT_SSH","C:\ProgramData\chocolatey\lib\putty.portable\tools\plink.exe", "user")
+
+# Set region to Dutch (my region)
+ Set-Culture nl-NL
 
 echo ""
 echo "After this, the computer should be restarted and install2.ps1 should be run to finish installation"
