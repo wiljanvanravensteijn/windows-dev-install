@@ -12,10 +12,23 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 choco feature enable -n=allowGlobalConfirmation
 
 # install basic software
-choco install vscode git putty docker-desktop nodejs-lts dotnet dotnet-sdk 7zip vlc microsoft-windows-terminal googlechrome wsl2 python
+choco install 7zip
+choco install docker-desktop
+choco install dotnet
+choco install dotnet-sdk
+choco install git
+choco install googlechrome 
+choco install microsoft-windows-terminal
+choco install nodejs-lts
+choco install putty
+choco install python
+choco install vlc
+choco install vscode
+choco install wsl2
 
 # global node packages
-npm install -g yarn eslint
+npm install -g eslint
+npm install -g yarn
 
 # remove cruft
 Get-AppxPackage *Autodesk* | Remove-AppxPackage
