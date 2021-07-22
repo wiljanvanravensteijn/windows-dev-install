@@ -87,17 +87,17 @@ Get-AppxPackage Microsoft.ZuneMusic | Remove-AppxPackage
 Get-AppxPackage Microsoft.ZuneVideo | Remove-AppxPackage
 
 # VS Code extensions
-code --install-extension ms-dotnettools.csharp
-code --install-extension ms-vscode.vscode-typescript-next
-code --install-extension ms-python.python
-code --install-extension octref.vetur
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension streetsidesoftware.code-spell-checker
-code --install-extension eamodio.gitlens
-code --install-extension mhutchie.git-graph
-code --install-extension zawys.vscode-as-git-mergetool
-code --install-extension jianbingfang.dupchecker
 code --install-extension 2gua.rainbow-brackets
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension eamodio.gitlens
+code --install-extension jianbingfang.dupchecker
+code --install-extension mhutchie.git-graph
+code --install-extension ms-dotnettools.csharp
+code --install-extension ms-python.python
+code --install-extension ms-vscode.vscode-typescript-next
+code --install-extension octref.vetur
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension zawys.vscode-as-git-mergetool
 
 # Let git use ssh from putty
 [Environment]::SetEnvironmentVariable("GIT_SSH","C:\ProgramData\chocolatey\lib\putty.portable\tools\plink.exe", "user")
