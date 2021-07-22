@@ -31,12 +31,24 @@ npm install -g eslint
 npm install -g yarn
 
 # remove cruft
+Get-AppxPackage *.AdobePhotoshopExpress | Remove-AppxPackage
+Get-AppxPackage *.Duolingo-LearnLanguagesforFree | Remove-AppxPackage
+Get-AppxPackage *.EclipseManager | Remove-AppxPackage
 Get-AppxPackage *Autodesk* | Remove-AppxPackage
 Get-AppxPackage *BubbleWitch* | Remove-AppxPackage
+Get-AppxPackage *Dell* | Remove-AppxPackage
+Get-AppxPackage *Facebook* | Remove-AppxPackage
+Get-AppxPackage *Keeper* | Remove-AppxPackage
 Get-AppxPackage *MarchofEmpires* | Remove-AppxPackage
 Get-AppxPackage *Minecraft* | Remove-AppxPackage
+Get-AppxPackage *Netflix* | Remove-AppxPackage
+Get-AppxPackage *Plex* | Remove-AppxPackage
 Get-AppxPackage *Solitaire* | Remove-AppxPackage
+Get-AppxPackage *Twitter* | Remove-AppxPackage
 Get-AppxPackage *windowscommunicationsapps* | Remove-AppxPackage
+Get-AppxPackage ActiproSoftwareLLC.562882FEEB491 | Remove-AppxPackage
+Get-AppxPackage G5* | Remove-AppxPackage
+Get-AppxPackage king.com* | Remove-AppxPackage
 Get-AppxPackage Microsoft.3DBuilder | Remove-AppxPackage
 Get-AppxPackage Microsoft.BingFinance | Remove-AppxPackage
 Get-AppxPackage Microsoft.BingNews | Remove-AppxPackage
