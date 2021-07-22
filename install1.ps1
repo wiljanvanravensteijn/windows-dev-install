@@ -21,11 +21,13 @@ choco install git
 choco install googlechrome
 choco install keepass
 choco install microsoft-windows-terminal
+choco install mRemoteNG
 choco install nodejs-lts
 choco install putty
 choco install python
 choco install vlc
 choco install vscode
+choco install winscp
 choco install wsl2
 
 # Global node packages
