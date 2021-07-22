@@ -18,7 +18,8 @@ choco install docker-desktop
 choco install dotnet
 choco install dotnet-sdk
 choco install git
-choco install googlechrome 
+choco install googlechrome
+choco insatll keepass
 choco install microsoft-windows-terminal
 choco install nodejs-lts
 choco install putty
