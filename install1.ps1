@@ -34,6 +34,7 @@ choco install wsl2
 # Global node packages
 npm install -g eslint
 npm install -g yarn
+npm install -g "@vue/cli"
 
 # Remove unnecessary apps
 Get-AppxPackage *.AdobePhotoshopExpress | Remove-AppxPackage
