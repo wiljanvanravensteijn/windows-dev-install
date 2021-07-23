@@ -97,12 +97,18 @@ code --install-extension dbaeumer.vscode-eslint
 code --install-extension eamodio.gitlens
 code --install-extension jianbingfang.dupchecker
 code --install-extension mhutchie.git-graph
+code --install-extension msjsdiag.debugger-for-chrome
+code --install-extension msjsdiag.debugger-for-edge
 code --install-extension ms-dotnettools.csharp
 code --install-extension ms-python.python
+code --install-extension ms-vscode-remote.vscode-remote-extensionpack
 code --install-extension ms-vscode.vscode-typescript-next
 code --install-extension octref.vetur
 code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension zawys.vscode-as-git-mergetool
+
+
+
 
 # Let git use ssh from putty
 [Environment]::SetEnvironmentVariable("GIT_SSH","C:\ProgramData\chocolatey\lib\putty.portable\tools\plink.exe", "user")
