@@ -2,12 +2,12 @@
 # You should allow scripts in powershell by first running: Set-ExecutionPolicy Bypass -Scope Process 
 #
 
-# Install windows-features
+# Install Windows-features
 Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName:Microsoft-Hyper-V -All
 Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName:Microsoft-Windows-Subsystem-Linux -all
 Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName:VirtualMachinePlatform -All
 
-# Install chocolatey
+# Install Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco feature enable -n=allowGlobalConfirmation
 
@@ -33,7 +33,7 @@ choco install vscode
 choco install winscp
 choco install wsl2
 
-# Global node packages
+# Global Node.js packages
 npm install -g eslint
 npm install -g yarn
 npm install -g "@vue/cli"
@@ -109,7 +109,7 @@ code --install-extension octref.vetur
 code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension zawys.vscode-as-git-mergetool
 
-# Let git use ssh from putty
+# Let git use ssh from Putty so I can use Pageant so load my private keys
 [Environment]::SetEnvironmentVariable("GIT_SSH","C:\ProgramData\chocolatey\lib\putty.portable\tools\plink.exe", "user")
 
 # Set region to Dutch (my region)
