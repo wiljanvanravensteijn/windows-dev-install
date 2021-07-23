@@ -2,12 +2,12 @@
 # You should allow scripts in powershell by first running: Set-ExecutionPolicy Bypass -Scope Process 
 #
 
-# Install windows-features
+# Install Windows-features
 Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName:Microsoft-Hyper-V -All
 Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName:Microsoft-Windows-Subsystem-Linux -all
 Enable-WindowsOptionalFeature -Online -NoRestart -FeatureName:VirtualMachinePlatform -All
 
-# Install chocolatey
+# Install Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco feature enable -n=allowGlobalConfirmation
 
@@ -32,7 +32,7 @@ choco install vscode
 choco install winscp
 choco install wsl2
 
-# Global node packages
+# Global Node.js packages
 npm install -g eslint
 npm install -g yarn
 npm install -g "@vue/cli"
