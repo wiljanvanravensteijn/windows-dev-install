@@ -122,5 +122,3 @@ Remove-Item "$DesktopPath\*.lnk"
 
 echo ""
 echo "After this, the computer should be restarted and install2.ps1 should be run to finish installation"
-
-
