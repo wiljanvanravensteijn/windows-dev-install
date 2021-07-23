@@ -108,7 +108,7 @@ code --install-extension octref.vetur
 code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension zawys.vscode-as-git-mergetool
 
-# Let git use ssh from putty
+# Let git use ssh from putty so I can use Pageant so load my private keys
 [Environment]::SetEnvironmentVariable("GIT_SSH","C:\ProgramData\chocolatey\lib\putty.portable\tools\plink.exe", "user")
 
 # Set region to Dutch (my region)
