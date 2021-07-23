@@ -1,6 +1,6 @@
 My attempt to automate a lot of manual tasks that need to be performed when freshly installing windows. Other scripts exist but this one is all about my preferences. Trying to keep it simple without functions and loops.
 
-# How to use:
+# How to use
 
 1. Start an elevated powershell (run as administrator)
 1. Run `Set-ExecutionPolicy Bypass -Scope Process` to enable custom scripts
