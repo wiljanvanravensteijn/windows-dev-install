@@ -111,7 +111,7 @@ code --install-extension zawys.vscode-as-git-mergetool
 [Environment]::SetEnvironmentVariable("GIT_SSH","C:\ProgramData\chocolatey\lib\putty.portable\tools\plink.exe", "user")
 
 # Set region to Dutch (my region)
- Set-Culture nl-NL
+Set-Culture nl-NL
 
 # Remove shortcuts from desktop
 $DesktopPath = [Environment]::GetFolderPath("Desktop")
