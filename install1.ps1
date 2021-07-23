@@ -13,6 +13,7 @@ choco feature enable -n=allowGlobalConfirmation
 
 # Install basic software
 choco install 7zip
+choco install clamwin
 choco install dbeaver
 choco install docker-desktop
 choco install dotnet
