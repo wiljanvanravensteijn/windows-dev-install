@@ -94,6 +94,7 @@ Get-AppxPackage Microsoft.ZuneMusic | Remove-AppxPackage
 Get-AppxPackage Microsoft.ZuneVideo | Remove-AppxPackage
 
 # VS Code extensions
+$env:Path += ";C:\Program Files\Microsoft VS Code\bin" 
 code --install-extension 2gua.rainbow-brackets
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension eamodio.gitlens
