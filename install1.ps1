@@ -34,6 +34,7 @@ choco install winscp
 choco install wsl2
 
 # Global Node.js packages
+$env:Path += ";$HOME\AppData\Roaming\npm" 
 npm install -g eslint
 npm install -g yarn
 npm install -g "@vue/cli"
